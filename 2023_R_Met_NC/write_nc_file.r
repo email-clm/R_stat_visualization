@@ -118,7 +118,7 @@ for(year in 1996:2020)
      att.put.nc(onc, "PRECTmms", "Mode", "NC_CHAR", "time-dependent")
 
     tbot[1,1,] <- data[x:(x+timestep-1),6] + 273.15    # temperature at half an hour time step
-    prec[1,1,] <- data[x:(x+timestep-1),7]    # precipitation
+    prec[1,1,] <- data[x:(x+timestep-1),7] / 1800.0   # precipitation convert from mm per half an hour to mm / s
     rh[1,1,] <- data[x:(x+timestep-1),8]      # rh
     psrf[1,1,] <- data[x:(x+timestep-1),9] * 1000.0    # air pressure
     wind[1,1,] <- data[x:(x+timestep-1),10]   # wind speed
