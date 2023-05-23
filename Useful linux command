@@ -1,1 +1,5 @@
 
+
+set up time in linux system
+date --set="23 June 1988 10:00:00"
+date --set="10:00:00"
